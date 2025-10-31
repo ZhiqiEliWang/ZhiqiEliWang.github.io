@@ -305,24 +305,83 @@ main {
   font-size: 14px;
 }
 
+/* Playlist and Map Row */
+.playlist-map-row {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 3rem auto 2rem;
+  padding: 2.5rem;
+  background-color: var(--secondary-bg);
+  border-radius: 8px;
+  border-top: 3px solid var(--primary-color);
+}
+
+.playlist-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.playlist-section h2 {
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.video-container {
+  width: 100%;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.video-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: none;
+}
+
 /* Visitor map wrapper */
 .visitor-map {
-  margin-top: 1.5rem;
+  flex: 0 0 auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 280px;
+  max-width: 320px;
+}
+
+.visitor-map::before {
+  content: "Visitor Map";
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-align: center;
 }
 
 .visitor-map iframe,
 .visitor-map canvas,
 .visitor-map div {
   max-width: 100%;
-}
-
-/* Prefer a constrained width while centered */
-.visitor-map {
-  max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
+  border-radius: 4px;
 }
 
 /* ===========================
@@ -364,6 +423,26 @@ main {
   
   .profile-image {
     order: 1;
+  }
+  
+  .playlist-map-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .playlist-section {
+    max-width: 100%;
+  }
+  
+  .playlist-section h2 {
+    font-size: 18px;
+  }
+  
+  .visitor-map {
+    max-width: 100%;
+    align-self: center;
   }
 }
 
@@ -409,6 +488,20 @@ main {
   .award-date {
     display: block;
     margin-bottom: 0.25rem;
+  }
+  
+  .playlist-map-row {
+    padding: 1rem;
+    margin: 2rem auto 1rem;
+  }
+  
+  .playlist-section h2 {
+    font-size: 16px;
+  }
+  
+  .visitor-map {
+    padding: 1rem;
+    min-width: 240px;
   }
 }
 
