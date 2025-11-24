@@ -293,6 +293,19 @@ main {
   opacity: 0.5;
 }
 
+.pub-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.pub-badges .badge {
+  height: 32px;
+  width: auto;
+}
+
 /* ===========================
    Footer
    =========================== */
