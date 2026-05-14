@@ -190,18 +190,33 @@ a:focus {
   width: 200px;
   height: 200px;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-image img {
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
   transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .profile-image img:hover {
   opacity: 0.9;
+}
+
+.profile-caption {
+  font-size: 13px;
+  font-style: italic;
+  color: #666;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  min-height: 1.2em;
+  line-height: 1.2;
 }
 
 /* ===========================
@@ -318,33 +333,6 @@ main {
   font-size: 14px;
 }
 
-/* Playlist and Map Row */
-.playlist-map-row {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-top: 2.5rem;
-  padding: 2rem;
-  background-color: var(--secondary-bg);
-  border-radius: 8px;
-  border-top: 3px solid var(--primary-color);
-}
-
-.playlist-section {
-  flex: 1;
-  min-width: 0;
-}
-
-.playlist-section h2 {
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--border-color);
-  color: var(--text-color);
-}
-
 .video-container {
   width: 100%;
   background: #000;
@@ -366,34 +354,16 @@ main {
   border: none;
 }
 
-/* Visitor map wrapper */
-.visitor-map {
-  flex: 0 0 auto;
+/* Visitor map in footer */
+.visitor-map-footer {
+  margin-top: 1rem;
+  opacity: 0.5;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1.25rem;
-  background: white;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  min-width: 260px;
-  max-width: 300px;
-}
-
-.visitor-map::before {
-  content: "Visitor Map";
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text-color);
-  text-align: center;
-}
-
-.visitor-map iframe,
-.visitor-map canvas,
-.visitor-map div {
-  max-width: 100%;
-  border-radius: 4px;
+  justify-content: center;
+  transform: scale(0.45);
+  transform-origin: center top;
+  height: 90px;
+  overflow: hidden;
 }
 
 /* ===========================
@@ -437,25 +407,6 @@ main {
     order: 1;
   }
   
-  .playlist-map-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 2rem;
-    padding: 1.5rem;
-  }
-  
-  .playlist-section {
-    max-width: 100%;
-  }
-  
-  .playlist-section h2 {
-    font-size: 18px;
-  }
-  
-  .visitor-map {
-    max-width: 100%;
-    align-self: center;
-  }
 }
 
 /* Mobile phones */
@@ -502,19 +453,6 @@ main {
     margin-bottom: 0.25rem;
   }
   
-  .playlist-map-row {
-    padding: 1rem;
-    margin: 2rem auto 1rem;
-  }
-  
-  .playlist-section h2 {
-    font-size: 16px;
-  }
-  
-  .visitor-map {
-    padding: 1rem;
-    min-width: 240px;
-  }
 }
 
 /* Large screens */
