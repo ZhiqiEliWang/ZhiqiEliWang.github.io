@@ -36,7 +36,7 @@
         <nav class="profile-links">
           <a href="mailto:zbw5349@psu.edu">Email</a>
           <span class="separator">/</span>
-          <a href="data/cv.pdf">CV</a>
+          <a href="images/cv.pdf">CV</a>
           <span class="separator">/</span>
           <a href="https://github.com/ZhiqiEliWang">Github</a>
           <span class="separator">/</span>
@@ -44,48 +44,20 @@
         </nav>
       </div>
       <div class="profile-image">
-        <img src="images/profile.jpg" alt="Profile photo of Zhiqi (Eli) Wang">
+        <img id="profile-img" src="images/pfp/default.jpg" alt="Profile photo of Zhiqi (Eli) Wang">
+        <p class="profile-caption" id="profile-caption">&nbsp;</p>
       </div>
     </header>
 
     <!-- Main Content -->
     <main id="main-content">
-      <!-- Research Interests Section -->
-      <section class="content-section">
-        <h2>Research Interests</h2>
-        <p><strong>AI Safety & Security:</strong> Exploring vulnerabilities (e.g., attack surface) of AI models and systems, defining them, and mitigating them.</p>
-      </section>
-
       <!-- News Section -->
       <section class="content-section">
         <h2>News</h2>
         <ul class="news-list">
           <li><span class="news-date">[10/2025]</span> Received ACM CCS 2025 Young Scholar Development Program Travel Grant</li>
-          <li><span class="news-date">[08/2025]</span> Paper accepted to ACM CCS 2025</li>
+          <li><span class="news-date">[08/2025]</span> My first paper was accepted by ACM CCS 2025</li>
         </ul>
-      </section>
-
-      <!-- Topics Investigated Section -->
-      <section class="content-section">
-        <h2>Topics I have investigated</h2>
-        <ul class="topics-list">
-          <li>Membership Inference Attacks on Neural Network Classifiers and LLM</li>
-          <li>LLM Jailbreak Transferability</li>
-        </ul>
-      </section>
-
-      <!-- Pre-prints Section -->
-      <section class="content-section">
-        <h2>Pre-prints</h2>
-        <div class="publication">
-          <div class="pub-title">Evaluating the Dynamics of Membership Privacy in Deep Learning</div>
-          <div class="pub-authors">Yuetian Chen, <strong>Zhiqi Wang</strong>, Nathalie Baracaldo, Swanand Ravindra Kadhe, Lei Yu</div>
-          <div class="pub-links">
-            <a href="https://arxiv.org/abs/2507.23291">arXiv</a>
-            <span class="separator">/</span>
-            <a href="https://arxiv.org/pdf/2507.23291.pdf">PDF</a>
-          </div>
-        </div>
       </section>
 
       <!-- Publications Section -->
@@ -110,6 +82,20 @@
         <!-- Add more publications here as needed -->
       </section>
 
+      <!-- Pre-prints Section -->
+      <section class="content-section">
+        <h2>Pre-prints</h2>
+        <div class="publication">
+          <div class="pub-title">Evaluating the Dynamics of Membership Privacy in Deep Learning</div>
+          <div class="pub-authors">Yuetian Chen, <strong>Zhiqi Wang</strong>, Nathalie Baracaldo, Swanand Ravindra Kadhe, Lei Yu</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2507.23291">arXiv</a>
+            <span class="separator">/</span>
+            <a href="https://arxiv.org/pdf/2507.23291.pdf">PDF</a>
+          </div>
+        </div>
+      </section>
+
       <!-- Services Section -->
       <section class="content-section">
         <h2>Services</h2>
@@ -123,27 +109,48 @@
           <li><span class="award-date">[10/2025]</span> ACM CCS 2025 Young Scholar Development Program Travel Grant (<a href="https://www.sigsac.org/ccs/CCS2025/call-for-young-scholars-development-program/">link</a>)</li>
         </ul>
       </section>
-    </main>
 
-    <!-- Playlist and Map Row -->
-    <div class="playlist-map-row">
-      <!-- Coding Playlist Section -->
-      <section class="playlist-section">
-        <h2>Here's a playlist I listen to while I am coding:</h2>
+      <!-- Misc Section -->
+      <section class="content-section">
+        <h2>Misc</h2>
+        <p>I play badminton. Here are some videos I find helpful:</p>
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLOXVrGjzaoE1uJZH9BMo42mjc3r2Wun3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p style="margin-top: 1.5rem;">A playlist I listen to while coding:</p>
         <div class="video-container">
           <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=sIbbB7mXxnXGarR5&amp;list=PLOXVrGjzaoE1oIaZAboRPANqyOMfMJwcC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </section>
-      <div class="visitor-map" aria-label="Visitor map">
-        <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=qdzGjuvEyfA1ZUbyw2A5IFBSNJD4a7mPQlFQ_G8vZkc&cl=ffffff&w=a"></script>
-      </div>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer class="site-footer">
-      <p>Last updated: October 2025</p>
-      <p>Built with <a href="https://www.cursor.com/">Cursor</a></p>
+      <div class="visitor-map-footer" aria-label="Visitor map">
+        <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=qdzGjuvEyfA1ZUbyw2A5IFBSNJD4a7mPQlFQ_G8vZkc&cl=ffffff&w=a"></script>
+      </div>
     </footer>
   </div>
+  <script>
+    (function () {
+      const img = document.getElementById('profile-img');
+      const caption = document.getElementById('profile-caption');
+      const defaultSrc = 'images/pfp/default.jpg';
+      const alternates = [
+        { src: 'images/pfp/alter_ego.png', caption: 'profile photo I use on the internet' },
+        { src: 'images/pfp/badminton.jpeg', caption: 'me playing my favorite sport' }
+      ];
+      if (!img || !caption) return;
+      img.addEventListener('mouseenter', () => {
+        const pick = alternates[Math.floor(Math.random() * alternates.length)];
+        img.src = pick.src;
+        caption.textContent = pick.caption;
+      });
+      img.addEventListener('mouseleave', () => {
+        img.src = defaultSrc;
+        caption.innerHTML = '&nbsp;';
+      });
+    })();
+  </script>
 </body>
 </html>
