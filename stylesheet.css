@@ -1,10 +1,17 @@
 /* ============================================================
    Zhiqi (Eli) Wang — homepage
    A web rendering of the RenderCV "classic" LaTeX layout:
-   Linux Biolinum, burgundy small-caps headings, ruled sections.
+   burgundy small-caps headings, ruled sections, San Francisco type.
    ============================================================ */
 
-/* ---------- Fonts: Linux Biolinum (the CV's \usepackage[sfdefault]{libertine}) ---------- */
+/* ---------- Fonts ----------
+   The page is set in San Francisco, referenced the way apple.com does it:
+   SF ships with macOS and iOS, so it is never downloaded, and its license
+   does not allow self-hosting. Non-Apple visitors fall through to their own
+   system UI face and then to Helvetica.
+
+   The Linux Biolinum faces below are the CV's \usepackage[sfdefault]{libertine}.
+   They are kept declared, and unreferenced, so the LaTeX look is one edit away. */
 @font-face {
   font-family: 'Linux Biolinum';
   src: url('fonts/LinBiolinum_R.woff2') format('woff2');
@@ -47,8 +54,8 @@
   --indent: .5rem;               /* the 0.2cm adjustwidth of onecolentry */
   --gutter: 3.4em;               /* the 1cm year column of twocolentry_pub */
 
-  --font: 'Linux Biolinum', 'Linux Biolinum O', 'Libertinus Sans', Optima,
-          'Lucida Grande', 'Segoe UI', system-ui, sans-serif;
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui,
+          'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 [data-theme="dark"] {
