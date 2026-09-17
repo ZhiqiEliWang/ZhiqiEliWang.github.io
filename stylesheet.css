@@ -43,7 +43,7 @@
   --sheet-width: 900px;
   --sheet-pad-x: 100px;
   --sheet-pad-y: 84px;
-  --fs: 15px;
+  --fs: 16px;
   --indent: .5rem;               /* the 0.2cm adjustwidth of onecolentry */
   --gutter: 3.4em;               /* the 1cm year column of twocolentry_pub */
 
@@ -520,7 +520,7 @@ details.pub:hover { background: var(--wash); }
 }
 
 @media (max-width: 700px) {
-  :root { --sheet-pad-x: 30px; --sheet-pad-y: 44px; --fs: 15.5px; --gutter: 3em; }
+  :root { --sheet-pad-x: 30px; --sheet-pad-y: 44px; --fs: 16.5px; --gutter: 3em; }
 
   .cv-header { flex-direction: column-reverse; align-items: center; text-align: center; gap: 1.1rem; }
   .cv-headline { width: 100%; }

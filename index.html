@@ -46,8 +46,6 @@
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2m0 16v2M4.2 4.2l1.4 1.4m12.8 12.8 1.4 1.4M2 12h2m16 0h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
-    <symbol id="i-fold" viewBox="0 0 24 24"><path d="m7 15 5 5 5-5M7 9l5-5 5 5"/></symbol>
-    <symbol id="i-unfold" viewBox="0 0 24 24"><path d="m7 20 5-5 5 5M7 4l5 5 5-5"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></symbol>
   </svg>
 
@@ -58,9 +56,6 @@
 
   <!-- Floating controls -->
   <div class="toolbar" role="group" aria-label="Page controls">
-    <button type="button" id="fold-all" class="tool" aria-label="Collapse all sections" title="Collapse all sections">
-      <svg class="ic" aria-hidden="true"><use href="#i-fold"/></svg>
-    </button>
     <button type="button" id="theme-toggle" class="tool" aria-label="Switch to dark theme" title="Switch theme">
       <svg class="ic ic-sun" aria-hidden="true"><use href="#i-sun"/></svg>
       <svg class="ic ic-moon" aria-hidden="true"><use href="#i-moon"/></svg>
@@ -209,16 +204,23 @@
 
             <h3 class="subhead">Preprints and In Submission</h3>
 
-            <div class="pub pub--static">
-              <div class="pub-row">
+            <details class="pub">
+              <summary>
                 <span class="gutter">2026</span>
                 <span class="pub-body">
                   <span class="pub-title">Lost in Compaction: Evaluating Side-Constraint Loss under Context Compaction</span>
                   <span class="pub-authors"><strong>Zhiqi Wang</strong>, <a class="quiet-link" href="https://yichics.github.io/">Yichi Zhang</a>, Dongwon Lee, Yuchen Yang</span>
                   <span class="pub-venue">In Submission</span>
                 </span>
+              </summary>
+              <div class="pub-drawer">
+                <p class="pub-links">
+                  <a href="https://arxiv.org/abs/2608.11242">arXiv</a>
+                  <span class="sep">&middot;</span>
+                  <a href="https://arxiv.org/pdf/2608.11242">PDF</a>
+                </p>
               </div>
-            </div>
+            </details>
 
             <div class="pub pub--static">
               <div class="pub-row">
@@ -283,7 +285,7 @@
 
       <footer class="sheet-footer">
         <div class="visitor-map" aria-label="Visitor map">
-          <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=qdzGjuvEyfA1ZUbyw2A5IFBSNJD4a7mPQlFQ_G8vZkc&cl=ffffff&w=a"></script>
+          <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?cl=f4f1ea&w=a&t=tt&d=qdzGjuvEyfA1ZUbyw2A5IFBSNJD4a7mPQlFQ_G8vZkc&co=704148&cmo=b08b90&cmn=17161a&ct=f4f1ea"></script>
         </div>
         <p class="last-updated">Last updated in July 2026</p>
       </footer>

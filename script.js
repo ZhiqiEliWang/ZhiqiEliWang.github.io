@@ -46,31 +46,6 @@
   revealHash();
   window.addEventListener('hashchange', revealHash);
 
-  /* ---------- Collapse / expand everything ---------- */
-  var foldAll = document.getElementById('fold-all');
-
-  function setFoldButton(collapsed) {
-    if (!foldAll) return;
-    var label = collapsed ? 'Expand all sections' : 'Collapse all sections';
-    foldAll.setAttribute('aria-label', label);
-    foldAll.setAttribute('title', label);
-    foldAll.querySelector('use').setAttribute('href', collapsed ? '#i-unfold' : '#i-fold');
-  }
-
-  if (foldAll) {
-    foldAll.addEventListener('click', function () {
-      var shouldCollapse = sections.some(function (s) { return s.open; });
-      sections.forEach(function (s) { s.open = !shouldCollapse; });
-      setFoldButton(shouldCollapse);
-    });
-
-    sections.forEach(function (section) {
-      section.addEventListener('toggle', function () {
-        setFoldButton(!sections.some(function (s) { return s.open; }));
-      });
-    });
-  }
-
   /* ---------- Email: reassemble the address only in the live DOM ---------- */
   var emailLink = document.getElementById('email');
 
